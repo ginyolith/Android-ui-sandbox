@@ -1,0 +1,2 @@
+package jp.ginyolith.androiduisandbox
+

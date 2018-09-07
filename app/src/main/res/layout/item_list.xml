@@ -14,7 +14,7 @@
         android:layout_height="match_parent">
 
         <View
-            android:layout_above="@+id/icon"
+            android:layout_above="@+id/circle_container"
             android:layout_centerHorizontal="true"
             android:visibility="@{model.isTop ?  View.GONE : View.VISIBLE}"
             android:background="@color/colorPrimaryDark"
@@ -22,15 +22,30 @@
             android:layout_height="wrap_content">
         </View>
 
-        <ImageView
-            android:id="@+id/icon"
-            android:src="@mipmap/ic_launcher_round"
-            android:layout_centerInParent="true"
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/circle_container"
+            android:background="@drawable/circle_shape"
             android:layout_width="40dp"
-            android:layout_height="40dp"/>
+            android:layout_height="40dp">
+
+            <TextView
+                android:text="27"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:text="月"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
 
         <View
-            android:layout_below="@+id/icon"
+            android:layout_below="@+id/circle_container"
             android:visibility="@{model.isBottom ?  View.GONE : View.VISIBLE}"
             android:layout_centerHorizontal="true"
             android:background="@color/colorPrimaryDark"
